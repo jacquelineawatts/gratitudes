@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% block content %}
+    {% for entry in entries %}
+        <div class="entry">
+            <p>{{ entry.text|linebreaksbr }}</p>
+            <p><em>Published at: {{ entry.published_date }}</em></p>
+            <br>
+        </div>
+    {% endfor %}
+{% endblock %}

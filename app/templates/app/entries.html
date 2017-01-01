@@ -1,8 +1,11 @@
 {% extends 'app/base.html' %}
 {% block content %}
+    <h4>Daily Entries: </h4>
     {% for entry in entries %}
         <div class="entry">
-            <p>{{ entry.text|linebreaksbr }}</p>
+            <p>1. {{ entry.text }}</p>
+            <p>2. {{ entry.text }}</p>
+            <p>3. {{ entry.text }}</p>
             <p><em>Published at: {{ entry.published_date }}</em></p>
             <br>
         </div>

@@ -1,8 +1,16 @@
 from django import forms
-from .models import Entry
+from .models import Gratitude
 
 class EntryForm(forms.ModelForm):
 
     class Meta:
-        model = Entry
+        model = Gratitude
+        fields = ('text',)
+
+    class Meta:
+        model = Gratitude
+        fields = ('text',)
+
+    class Meta:
+        model = Gratitude
         fields = ('text',)

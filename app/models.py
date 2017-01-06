@@ -3,8 +3,6 @@ from django.utils import timezone
 
 class Entry(models.Model):
 
-    author = models.ForeignKey('auth.User')
-    text = models.TextField()
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -24,3 +22,10 @@ class Comment(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(
         default=timezone.now)
+
+
+class Gratitude(models.Model):
+
+    author = models.ForeignKey('auth.User')
+    text = models.TextField()
+    entry = models.ForeignKey(Entry, on_delete=models.CASCADE)

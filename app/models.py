@@ -13,8 +13,13 @@ class Entry(models.Model):
         self.save()
 
     def __str__(self):
-        return '{}: {}'.format(self.author, self.text)
+        return '{}'.format(self.created_date)
 
+class Gratitude(models.Model):
+
+    author = models.ForeignKey('auth.User')
+    text = models.TextField()
+    entry = models.ForeignKey(Entry, on_delete=models.CASCADE)
 
 class Comment(models.Model):
 
@@ -22,10 +27,4 @@ class Comment(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(
         default=timezone.now)
-
-
-class Gratitude(models.Model):
-
-    author = models.ForeignKey('auth.User')
-    text = models.TextField()
-    entry = models.ForeignKey(Entry, on_delete=models.CASCADE)
+    gratitude = models.ForeignKey(Gratitude, on_delete=models.CASCADE)

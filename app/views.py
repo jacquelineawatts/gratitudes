@@ -12,10 +12,11 @@ def entries(request):
         form = EntryForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user
+            # post.author = request.user
             post.published_date = timezone.now()
             post.save()
 
             return redirect('entries')
 
     return render(request, 'app/entries.html', {'entries': entries, 'form': form})
+

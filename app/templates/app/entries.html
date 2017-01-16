@@ -3,10 +3,10 @@
     <h4>Daily Entries: </h4>
     {% for entry in entries %}
         <div class="entry">
-            <p>1. {{ entry.text }}</p>
+<!--             <p>1. {{ entry.text }}</p>
             <p>2. {{ entry.text }}</p>
             <p>3. {{ entry.text }}</p>
-            <p><em>Published at: {{ entry.published_date }}</em></p>
+ -->            <p><em>Published at: {{ entry.published_date }}</em></p>
             <a href='#' data-toggle="modal" data-target="#{{ entry.id }}Modal">See full entry.</a>
             <br>
         </div>
@@ -20,10 +20,10 @@
             <h4 class="modal-title" id="entryModalLabel">Entry</h4>
           </div>
           <div class="modal-body">
-            <p>1. {{ entry.text }}</p>
+<!--             <p>1. {{ entry.text }}</p>
             <p>2. {{ entry.text }}</p>
             <p>3. {{ entry.text }}</p>
-            <p><em>Published at: {{ entry.published_date }}</em></p>
+ -->            <p><em>Published at: {{ entry.published_date }}</em></p>
           </div>
         </div>
       </div>

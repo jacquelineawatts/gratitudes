@@ -22,3 +22,9 @@ def entries(request):
             return redirect('entries')
 
     return render(request, 'app/entries.html', {'entries': entries, 'form': grat_form})
+
+
+def profiles(request):
+    profile = User.objects.get()
+
+    return render(request, 'app/profile.html', {'user': user, 'form': profile_form})

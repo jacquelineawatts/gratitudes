@@ -14,3 +14,8 @@ class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
         fields = ('created_date', )
+
+
+class UserForm(forms.ModelForm):
+
+    pass

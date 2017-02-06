@@ -27,4 +27,6 @@ def entries(request):
 def profiles(request):
     profile = User.objects.get()
 
+    user_form = Userform()
+
     return render(request, 'app/profile.html', {'user': user, 'form': profile_form})
